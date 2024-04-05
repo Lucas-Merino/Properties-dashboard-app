@@ -44,7 +44,7 @@ export const Login: React.FC = () => {
     <Box
       component="div"
       sx={{
-        background: `radial-gradient(circle farthest-side, #fceabb, #f8b500)`,
+        background: `radial-gradient(circle farthest-side, white, gray)`,
         backgroundSize: "cover",
       }}
     >

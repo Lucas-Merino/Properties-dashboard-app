@@ -26,7 +26,7 @@ const PropertyDetails = () => {
   if(isLoading) return <div>Loading...</div>
   if(isError) return <div>Error.</div>
 
-  const isCurrentUser = user.email === propertyDetails.creator.email;
+  const isCurrentUser = user?.email === propertyDetails?.creator?.email;
 
   const handleDeleteProperty = () => {
     const response = window.confirm( "Are you sure you want to delete this property?");
@@ -168,7 +168,7 @@ const PropertyDetails = () => {
               >
                 <img
                   src={
-                    checkImage(propertyDetails.creator.avatar)
+                    checkImage(propertyDetails?.creator?.avatar)
                       ? propertyDetails.creator.avatar
                       : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png"
                   }
@@ -187,7 +187,7 @@ const PropertyDetails = () => {
                     fontWeight={600}
                     color="#11142D"
                   >
-                    {propertyDetails.creator.name}
+                    {propertyDetails?.creator?.name}
                   </Typography>
                   <Typography
                     mt="5px"
@@ -221,7 +221,7 @@ const PropertyDetails = () => {
                         fontWeight={600}
                         color="#11142D"
                     >
-                        {propertyDetails.creator.allProperties.length}{" "}
+                        {propertyDetails?.creator?.allProperties.length}{" "}
                         Properties
                     </Typography>
               </Stack>
